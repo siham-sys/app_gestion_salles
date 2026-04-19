@@ -12,4 +12,14 @@ class ServiceSalle:
                 return False, "La capacité doit être supérieure ou égale à 1"
         return False, "Veuillez remplir tous les champs"
 
+    def modifier_salle(self, salle):
+        if salle.code and salle.description and salle.categorie and salle.capacite:
+            if salle.capacite >= 1:
+                self.dao_salle.update_salle(salle)
+                return True, "modifiée"
+            else:
+                return False, "Capacité invalide"
+        return False, "il manque des donnees"
+
+
 
