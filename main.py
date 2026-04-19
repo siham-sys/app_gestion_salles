@@ -36,3 +36,8 @@ salle1.capacite=50
 service.modifier_salle(salle1)
 
 service.supprimer_salle("A207")
+
+from views.view_salle import ViewSalle
+
+app = ViewSalle()
+app.mainloop()
