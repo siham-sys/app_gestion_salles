@@ -77,3 +77,7 @@ class ViewSalle(ctk.CTk):
         self.service_salle.supprimer_salle(code)
         self.lister_salles()
 
+    def rechercher_salle(self):
+        code = self.entry_code.get()
+        salle = self.service_salle.rechercher_salle(code)
+
