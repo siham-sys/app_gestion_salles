@@ -4,3 +4,5 @@ class Salle:
         self.description = description
         self.categorie = categorie
         self.capacite = capacite
+    def afficher_infos(self):
+        print(f"Salle : {self.code} , {self.description} ,{self.categorie} , {self.capacite} places")
