@@ -36,5 +36,17 @@ class ViewSalle(ctk.CTk):
         ctk.CTkButton(self.frame_btn, text="Supprimer", command=self.supprimer_salle).grid(row=0, column=2)
         ctk.CTkButton(self.frame_btn, text="Rechercher", command=self.rechercher_salle).grid(row=0, column=3)
 
+        self.frame_table = ctk.CTkFrame(self)
+        self.frame_table.pack(pady=10, fill="both", expand=True)
 
+        self.tree = ttk.Treeview(self.frame_table, columns=("code", "desc", "cat", "cap"), show="headings")
+
+        self.tree.heading("code", text="Code")
+        self.tree.heading("desc", text="Description")
+        self.tree.heading("cat", text="Categorie")
+        self.tree.heading("cap", text="Capacite")
+
+        self.tree.pack(fill="both", expand=True)
+
+        self.lister_salles()
 
