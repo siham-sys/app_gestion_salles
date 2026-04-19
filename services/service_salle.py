@@ -21,5 +21,8 @@ class ServiceSalle:
                 return False, "Capacité invalide"
         return False, "il manque des donnees"
 
+    def supprimer_salle(self, code):
+        self.dao_salle.delete_salle(code)
+
 
 
