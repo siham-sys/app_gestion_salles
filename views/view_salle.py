@@ -50,3 +50,25 @@ class ViewSalle(ctk.CTk):
 
         self.lister_salles()
 
+    def ajouter_salle(self):
+        salle = Salle(
+            self.entry_code.get(),
+            self.entry_desc.get(),
+            self.entry_cat.get(),
+            int(self.entry_cap.get())
+        )
+
+        self.service_salle.ajouter_salle(salle)
+        self.lister_salles()
+
+    def modifier_salle(self):
+        salle = Salle(
+            self.entry_code.get(),
+            self.entry_desc.get(),
+            self.entry_cat.get(),
+            int(self.entry_cap.get())
+        )
+
+        self.service_salle.modifier_salle(salle)
+        self.lister_salles()
+
