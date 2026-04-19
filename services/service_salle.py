@@ -5,7 +5,7 @@ class ServiceSalle:
 
     def ajouter_salle(self,salle):
         if salle.code and salle.description and salle.categorie and salle.capacite:
-            if salle.categorie >= 1:
+            if salle.capacite >= 1:
                 self.dao_salle.insert_salle(salle)
                 return True, "La salle a été ajoutée avec succès"
             else:
