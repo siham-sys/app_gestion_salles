@@ -13,4 +13,19 @@ class ViewSalle(ctk.CTk):
 
         self.service_salle = ServiceSalle()
 
+        self.frame_info = ctk.CTkFrame(self)
+        self.frame_info.pack(pady=10)
+
+        self.entry_code = ctk.CTkEntry(self.frame_info, placeholder_text="Code")
+        self.entry_code.grid(row=0, column=0)
+
+        self.entry_desc = ctk.CTkEntry(self.frame_info, placeholder_text="Description")
+        self.entry_desc.grid(row=0, column=1)
+
+        self.entry_cat = ctk.CTkEntry(self.frame_info, placeholder_text="Categorie")
+        self.entry_cat.grid(row=0, column=2)
+
+        self.entry_cap = ctk.CTkEntry(self.frame_info, placeholder_text="Capacite")
+        self.entry_cap.grid(row=0, column=3)
+
 
